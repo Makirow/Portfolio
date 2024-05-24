@@ -1,0 +1,148 @@
+
+.Chatlist::-webkit-scrollbar{
+    display: none;
+}
+
+.Chatlist{
+    flex: 1;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    .spaceOut{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            ion-icon{
+                font-size: 1.5rem;
+                background-color: rgb(255, 255, 255, 0.6);
+                color: rgb(0, 0, 0,0.5);
+                border-radius: 50%;
+                opacity: 0;
+                visibility: hidden;
+                transition: 0.5s linear;
+            }
+    }
+    abbr{
+        color: red;
+    }
+
+
+    .search{
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        position: sticky;
+        padding: 20px;
+        
+
+           .search-bar{
+             flex: 1;
+             background-color: rgb(0, 0, 0,0.5);
+             display: flex;
+             align-items: center;
+             gap: 15px;
+             padding: 10px;
+             height: 40px;
+             border-radius: 10px;
+
+                input{
+                     background: transparent;
+                     outline: none;
+                     border: none;
+                     height: 100%;
+                     font-size: 17px;
+                     color: white;
+                     flex: 1;
+                }
+                input::placeholder{
+                    color: rgb(255, 255, 255, 0.6);
+                }
+                ion-icon{
+                    color: rgb(255, 255, 255, 0.6);
+                    font-size: 20px;
+                }
+
+           }
+
+          
+
+
+    }
+}
+
+.search ion-icon:last-child{
+    width: 30px;
+    height: 30px;
+    font-weight: 800;
+    backdrop-filter: blur(30px);
+    cursor: pointer;
+    padding: 0px;
+   }
+
+
+   .items img{
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+   }
+
+   .items:hover, .items.active{
+      background-color: rgb(0, 0, 0,0.5);
+
+      ion-icon{
+        opacity: 1;
+        visibility: visible;
+        
+    }
+    ion-icon:hover{
+        color: white;
+        background: red;
+    }
+
+   }
+   .items{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+    border-bottom: .5px solid rgb(255, 255, 255, 0.6);
+
+     .texts{
+        display: flex;
+         flex-direction: column;
+        gap: 10px;
+
+        span{
+            font-weight: 550;
+            font-size: 15px;
+            text-transform: capitalize;
+            color: #08e6ee;
+            width: 150px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        p{
+            font-size: 13px;
+            width: 200px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            font-weight: 350;
+        }
+        .spread{
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+
+            b{
+                font-size: 13px;
+            }
+        }
+     }
+
+   }

@@ -1,0 +1,301 @@
+.Chat{
+    flex: 2.3;
+    border-left: .5px solid rgb(255, 255, 255, 0.3);
+    border-right: .5px solid rgb(255, 255, 255, 0.3);
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    margin-left: 0px;
+    color: white;
+    
+    flex-direction: column;
+
+    .top{
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: .5px solid rgb(255, 255, 255, 0.3);
+        background: rgb(0, 0, 0, 0.5);
+        backdrop-filter: blur(10px);
+
+        .texts{
+            display: flex;
+             flex-direction: column;
+            gap: 10px;
+            
+    
+            span{
+                font-weight: 600;
+                text-transform: capitalize;
+                color: #08e6ee;
+                font-size: 20px;
+            }
+            p{
+                font-size: 13px;
+                font-weight: 300;
+            }
+         }
+    }
+    .center::-webkit-scrollbar{
+        display: none;
+    }
+.center{
+    padding: 40px;
+    flex: 1;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+.message.active{
+      max-width: 350px;
+
+      .texts{
+
+      img{
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 10px;
+    }
+
+    &.owner{
+        align-self: flex-end;
+        max-width: 350px;
+
+
+        .texts{
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+            img{
+                width: 100%;
+                align-self: flex-end;
+                height: 300px;
+                object-fit: cover;
+                object-position: center;
+                border-top-left-radius: 30px;
+                border-bottom-right-radius: 30px;
+            }
+        }
+
+        img{
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            object-position: center;
+            border-top-left-radius: 30px;
+                border-bottom-right-radius: 30px;
+        }
+
+        .texts p{
+            font-size: 15px;
+            background: rgb(255, 255, 255, 0.2);
+            backdrop-filter: blur(30px);
+            letter-spacing: .5px;
+            border-top-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+
+        }
+        .texts span{
+            align-self: flex-end;
+        }
+    }
+}   
+
+}
+
+    .message{
+        max-width: 350px;
+        display: flex;
+        gap: 10px;
+
+        &.owner{
+            align-self: flex-end;
+            max-width: 350px;
+
+
+            .texts{
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+    
+                img{
+                    width: 300px;
+                    height: 300px;
+                    object-fit: cover;
+                    object-position: center;
+                    border-top-left-radius: 30px;
+                    border-bottom-right-radius: 30px;
+                }
+            }
+
+            img{
+                width: 300px;
+                height: 300px;
+                object-fit: cover;
+                border-top-left-radius: 30px;
+                border-bottom-right-radius: 30px;
+                object-position: center;
+               
+            }
+
+            .texts p{
+                font-size: 15px;
+                background: rgb(255, 255, 255, 0.2);
+                backdrop-filter: blur(30px);
+                letter-spacing: .5px;
+                width: 300px;
+                border-top-left-radius: 30px;
+                border-bottom-right-radius: 30px;
+
+            }
+            .texts span{
+                align-self: flex-end;
+            }
+        }
+
+        img{
+            width: 40px;
+            height: 40px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        .texts{
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+            img{
+                width: 300px;
+                height: 300px;
+                object-fit: cover;
+                object-position: center;
+                border-radius: 10px;
+            }
+        }
+        .texts p{
+            font-size: 15px;
+            border-bottom-right-radius: 30px;
+            border-top-left-radius: 30px;
+            background: rgb(0, 0, 0, 0.5);
+            backdrop-filter: blur(30px);
+            padding: 15px;
+            width: 100%;
+            letter-spacing: .5px;
+        }
+
+        .texts span{
+            font-size: 13px;
+        }
+    }
+}
+
+
+    .bottom{
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 25px;
+        width: 100%;
+        margin-top: auto;
+        left: 0;
+        user-select: none;
+        backdrop-filter: blur(10px);
+        background: rgb(0, 0, 0, 0.5);
+        box-shadow: 5px 0 5px rgb(255, 255, 255, 0.3);
+        z-index: 1000;
+
+        input{
+            flex: 1;
+             background: rgb(255, 255, 255, 0.2);
+              border: none;
+              color: white;
+              border-radius: 10px;
+              font-size: 16px;
+              padding: 15px;
+              outline: none;
+        }
+
+        .send-Btn{
+            background: #08e6ee;
+            border: none;
+            padding: 5px;
+            gap: 5px;
+            display: flex;
+            height: 30px;
+            width: 40px;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+            font-weight: bold;
+            box-shadow: 0 0 1rem #08e6ee;
+            transition: 0.5s linear;
+
+            ion-icon{
+                 transform: rotateZ(320deg);
+                 font-size: 20px;
+                 padding-bottom: 4px;
+                 padding-left: 5px;
+            }
+
+        }
+        .send-Btn:hover{
+            box-shadow: none;
+            cursor: pointer;    
+        }
+
+        
+    }
+   
+}
+
+.emoji ion-icon{
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.5s linear;
+}
+.emoji ion-icon:hover{
+    color: #08e6ee;
+}
+
+.emoji-container{
+    position: absolute;
+    bottom: 100%;
+
+}
+
+.center.active, .CallArea.active, .bottom.active{
+    display: none;
+}
+
+.CallArea{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999999;
+    background-color: transparent;
+
+    .background{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        object-fit: cover;
+    }
+}

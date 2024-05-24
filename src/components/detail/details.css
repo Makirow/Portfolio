@@ -1,0 +1,122 @@
+.Details.active{
+    display: none;
+}
+.Details{
+    flex: 1.1;
+     display: block;
+     color: white;
+     position: relative;
+     height: 100vh;
+     overflow-y: hidden;
+
+     .close:hover{
+        background-color: red;
+     }
+
+     .close{
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        color: white;
+        display: flex;
+        align-items: center ;
+        justify-content: center;
+        background: rgb(255, 255, 255, 0.3);
+        top: 10px;
+        transition: 0.5s  linear;
+        right: 10px;
+
+        ion-icon{
+            background: transparent;
+        }
+     }
+
+
+
+    img{
+        width: 55px;
+        height: 55px;
+        object-fit: cover;
+    }
+
+    .user{
+        padding: 30px 20px;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        flex-direction: column;
+        gap: 20px;
+        background: rgb(0, 0, 0, 0.5);
+
+           p{
+            font-size: 13px;
+           }
+    }
+    ion-icon{
+        font-size: 18px;
+        background: rgb(0, 0, 0, 0.5);
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+   }
+    .info{
+           padding: 20px;
+           display: flex;
+           flex-direction: column;
+           gap: 20px;
+            height: 100%;
+            overflow-y: scroll;
+            
+
+           .button{
+            padding: 10px;
+            border-radius: 5px;
+            width: 50%;
+            color: white;
+            margin-right: 10px;
+            background: rgb(255, 255, 255, 0.5);
+            border: none;
+            transition: .5s ease-in-out;
+           }
+           .button:hover, .button.active{
+                background-color: red;
+                cursor: pointer;
+           }
+
+           .option{
+
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+               .title{
+                 display: flex;
+                 align-items: center;
+                 justify-content: space-between;
+
+                 
+               }
+
+               .photos{
+                display: flex;
+               align-items: center;
+               justify-content: space-between;
+
+                  .photoItems{
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+                      img{
+                         border: 5px;
+                      }
+                      span{
+                        font-size: 13px;
+                        color: rgb(255, 255, 255, 0.5);
+                      }
+                  }
+               }
+
+               
+           }
+    }
+
+}
